@@ -25,7 +25,7 @@ export default function SwitchLang() {
   return (
     <button
       onClick={handleChangeLocale}
-      className="flex items-center arabic-char-fix justify-center text-center text-xl font-normal rounded-full w-10 h-10 border border-white hover:bg-white hover:text-[#4c0a7c] transition-all duration-200 ease-in-out"
+      className="flex items-center arabic-char-fix justify-center text-center mt-0.5 rounded-full text-xl font-normal  w-10 h-10 border border-white hover:bg-white hover:text-[#4c0a7c] transition-all duration-200 ease-in-out"
     >
       <span className={isArabic ? "arabic-char-fix" : ""}>{lang}</span>
     </button>

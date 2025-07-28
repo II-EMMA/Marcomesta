@@ -111,7 +111,7 @@ export default function Header() {
           lg:h-auto overflow-y-auto /* Enable internal scrolling */
           z-[1000] lg:bg-transparent`}
         >
-          <ul className="text-white flex lg:flex-row-reverse flex-col lg:gap-x-6 gap-y-4 items-center justify-center w-full lg:w-auto lg:py-0 py-32 font-Inter font-normal text-sm z-[200] bg-transparent">
+          <ul className="text-white flex lg:flex-row-reverse flex-col lg:gap-x-6 gap-y-8 items-center justify-center w-full lg:w-auto lg:py-0 py-32 font-Inter font-normal text-sm z-[200] bg-transparent">
             <div className="hidden lg:block">
               <SwitchLang />
             </div>
