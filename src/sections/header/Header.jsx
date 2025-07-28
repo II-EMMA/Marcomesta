@@ -46,7 +46,7 @@ export default function Header() {
       <header
         ref={headerRef}
         className={`sticky top-0 z-[3000] max-w-[1600px] mx-auto px-7 ${
-          toggle ? "pt-4 pb-96" : "lg:py-12 py-4"
+          toggle ? "pt-4 pb-96 -ml-14" : "lg:py-12 py-4"
         } px-4
              left-0 right-0
              flex flex-row justify-between items-center lg:h-[50px]`}
@@ -54,7 +54,9 @@ export default function Header() {
         <div className="flex items-center gap-x-4 z-[3500]">
           <Link href={"./"}>
             <img
-              className="max-w-[217px] max-h-[86px]"
+              className={`sm:max-w-[217px] max-w-[150px] max-h-[86px] ${
+                toggle ? "ml-14" : "ml-0"
+              }`}
               src={Logo.src}
               alt="Company logo"
             />
@@ -88,7 +90,7 @@ export default function Header() {
             toggle ? "flex" : "hidden"
           } lg:w-auto w-full flex lg:flex-row flex-col lg:gap-x-[180px] justify-between lg:flex h-full lg:h-auto z-[1000] bg-transparent`}
         >
-          <ul className="text-white flex lg:flex-row-reverse flex-col lg:gap-x-6 gap-y-4 items-center lg:py-0 pb-32 font-Inter font-normal text-sm z-[200] bg-transparent">
+          <ul className="text-white flex lg:flex-row-reverse flex-col lg:gap-x-6 gap-y-4 items-center justify-center w-full lg:w-auto lg:py-0 pb-32 font-Inter font-normal text-sm z-[200] bg-transparent ">
             <div className="lg:block lg:visible none invisible">
               <SwitchLang />
             </div>
@@ -101,7 +103,7 @@ export default function Header() {
                 {navigationBar[0]}
               </Link>
             </li>
-            <span className="h-full w-[1px] bg-white" />
+            <span className="h-full w-[1px] bg-white lg:block hidden" />
 
             <li>
               <Link
@@ -112,7 +114,7 @@ export default function Header() {
                 {navigationBar[1]}
               </Link>
             </li>
-            <span className="h-full w-[1px] bg-white" />
+            <span className="h-full w-[1px] bg-white lg:block hidden" />
 
             <li>
               <Link
@@ -123,7 +125,7 @@ export default function Header() {
                 {navigationBar[2]}
               </Link>
             </li>
-            <span className="h-full w-[1px] bg-white" />
+            <span className="h-full w-[1px] bg-white lg:block hidden" />
 
             <li>
               <Link
@@ -134,7 +136,7 @@ export default function Header() {
                 {navigationBar[3]}
               </Link>
             </li>
-            <span className="h-full w-[1px] bg-white" />
+            <span className="h-full w-[1px] bg-white lg:block hidden" />
 
             <li>
               <Link
