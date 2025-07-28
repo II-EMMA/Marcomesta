@@ -1,0 +1,119 @@
+{
+  "HomePage": {
+    "title": "Cloud Services",
+    "subTitle": "Raise your business exceptionally",
+    "description": "With us, communication becomes more effective when dealing with your customers in an easy and powerful way.",
+    "header": {
+      "btnText": "Login",
+      "navigationBar": ["Home", "About Us", "Services", "Clients", "Contact Us"]
+    },
+    "btnText": "Contact Us"
+  },
+  "Read": {
+    "description": "Specializing in cloud services, WhatsApp, and artificial intelligence. Providing innovative solutions to help you engage with customers more clearly and effectively.",
+    "btnText": "Read More"
+  },
+  "Fields": {
+    "title": "Marcomesta",
+    "subTitle": "Works with many fields",
+    "cards": {
+      "titles": [
+        "Companies",
+        "education",
+        "Medical Field",
+        "E-commerce",
+        "Tourism",
+        "Media"
+      ],
+      "descriptions": [
+        "It helps small and medium enterprises increase work efficiency and improve the quality of communication.",
+        "It helps to raise the efficiency of education",
+        "It helps to raise the efficiency of the medical field.",
+        "Helps to increase the efficiency of e-commerce",
+        "It helps to raise the efficiency of tourism",
+        "It helps to raise the efficiency of the media."
+      ]
+    }
+  },
+  "Boot": {
+    "title": "Create a fully interactive bot.",
+    "subTitle": "The bot operates 24 hours a day on WhatsApp and interacts quickly with customers to complete their services in a practical and satisfactory manner.",
+    "btnText": "Start Now"
+  },
+  "Clients": {
+    "title": "Clients",
+    "ContactUs": {
+      "title": "Contact Us",
+      "btnTextOne": "Send",
+      "btnTextTwo": "Email"
+    }
+  },
+  "Contact": {
+    "title": "Contact With Us",
+    "placeholders": {
+      "name": "Name",
+      "city": "City",
+      "email": "Email",
+      "phone": "Phone",
+      "more": "More"
+    },
+    "btnText": "Send"
+  },
+  "Services": {
+    "placeholders": {
+      "email": "Email",
+      "password": "Password",
+      "checkbox": "Remember me",
+      "question": "Forgot password ?"
+    },
+    "btnText": "Sign In"
+  },
+  "About": {
+    "title": "Who are we?",
+    "descriptions": [
+      "Marco Mesta is a leading artificial intelligence company, providing innovative solutions to help grow businesses and improve customer engagement.",
+      "We specialize in designing intelligent WhatsApp bots that help streamline operations and improve business efficiency within companies.",
+      "Our goal is to enable businesses to maximize the benefits of modern technology to deliver faster and more efficient services."
+    ],
+    "cards": [
+      {
+        "title": "Vision",
+        "descriptions": [
+          "We strive to be pioneers in providing smart AI solutions that contribute to improving customer experience and raising operational efficiency in companies.",
+          "We aim to become the first choice for innovation in the AI industry globally."
+        ]
+      },
+      {
+        "title": "Mission",
+        "descriptions": [
+          "At Marco Mesta, we are committed to providing integrated and effective solutions to our clients using advanced artificial intelligence technology.",
+          "We strive to make businesses more interactive and easier through innovative tools like WhatsApp bots that help companies engage with customers faster and more professionally."
+        ]
+      },
+      {
+        "title": "Morals",
+        "descriptions": []
+      }
+    ],
+    "smallCards": [
+      {
+        "headingText": "Innovation:",
+        "subHeadingText": "We always strive to provide new solutions that keep pace with the latest artificial intelligence technologies."
+      },
+      {
+        "headingText": "Partnership:",
+        "subHeadingText": "We consider every client a partner in success, and we work side by side to achieve their goals."
+      },
+      {
+        "headingText": "Professionalism:",
+        "subHeadingText": "Work with passion and efficiency to achieve the best results for our clients."
+      }
+    ],
+    "helpText": "Do you want to learn more about our solutions? Contact us now to discover how we can help your company transform digitally and deliver a superior customer experience.",
+    "ContactUs": {
+      "title": "Contact Us",
+      "btnTextOne": "Send",
+      "btnTextTwo": "Email"
+    }
+  }
+}

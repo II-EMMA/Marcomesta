@@ -1,0 +1,396 @@
+@import "tailwindcss";
+
+:root {
+  --color-gray: #484848;
+  --color-purple-0: #ffffff;
+  --color-purple-0-5: #f8eaf4;
+  --color-purple-1: #f0d5ea;
+  --color-purple-1-5: #e9c0df;
+  --color-purple-2: #e1abd4;
+  --color-purple-3: #d382bf;
+  --color-purple-4: #c458a9;
+  --color-purple-5: #b52e94;
+  --color-purple-6: #912576;
+  --color-purple-7: #6d1c59;
+  --color-purple-8: #48123b;
+  --color-purple-8-5: #360e2c;
+  --color-purple-9: #24091e;
+  --color-purple-9-5: #12050f;
+  --color-purple-10: #000000;
+  --color-purple-gradient-0: #dcb5f9; /* Starting with this color, not white */
+  --color-purple-gradient-0-5: #cea4ed;
+  --color-purple-gradient-1: #bf93e0;
+  --color-purple-gradient-1-5: #b182d4;
+  --color-purple-gradient-2: #a271c7;
+  --color-purple-gradient-3: #864eae;
+  --color-purple-gradient-4: #692c95;
+  --color-purple-gradient-5: #4c0a7c;
+  --color-purple-gradient-6: #3d0863;
+  --color-purple-gradient-7: #2e064a;
+  --color-purple-gradient-8: #1e0432;
+  --color-purple-gradient-8-5: #170325;
+  --color-purple-gradient-9: #0f0219;
+  --color-purple-gradient-9-5: #08010c;
+  --color-purple-gradient-10: #000000;
+  --gradient-purple-to-purple-gradient: linear-gradient(
+    to right,
+    #b52e94,
+    #4c0a7c
+  );
+}
+
+/* Custom CSS classes */
+.text-gray-color {
+  color: var(--color-gray);
+}
+.bg-purple-color-0 {
+  background-color: var(--color-purple-0);
+}
+.text-purple-color-0 {
+  color: var(--color-purple-0);
+}
+
+.bg-purple-color-0-5 {
+  background-color: var(--color-purple-0-5);
+}
+.text-purple-color-0-5 {
+  color: var(--color-purple-0-5);
+}
+
+.bg-purple-color-1 {
+  background-color: var(--color-purple-1);
+}
+.text-purple-color-1 {
+  color: var(--color-purple-1);
+}
+
+.bg-purple-color-1-5 {
+  background-color: var(--color-purple-1-5);
+}
+.text-purple-color-1-5 {
+  color: var(--color-purple-1-5);
+}
+
+.bg-purple-color-2 {
+  background-color: var(--color-purple-2);
+}
+.text-purple-color-2 {
+  color: var(--color-purple-2);
+}
+
+.bg-purple-color-3 {
+  background-color: var(--color-purple-3);
+}
+.text-purple-color-3 {
+  color: var(--color-purple-3);
+}
+
+.bg-purple-color-4 {
+  background-color: var(--color-purple-4);
+}
+.text-purple-color-4 {
+  color: var(--color-purple-4);
+}
+
+.bg-purple-color-5 {
+  background-color: var(--color-purple-5);
+}
+.text-purple-color-5 {
+  color: var(--color-purple-5);
+}
+
+.bg-purple-color-6 {
+  background-color: var(--color-purple-6);
+}
+.text-purple-color-6 {
+  color: var(--color-purple-6);
+}
+
+.bg-purple-color-7 {
+  background-color: var(--color-purple-7);
+}
+.text-purple-color-7 {
+  color: var(--color-purple-7);
+}
+
+.bg-purple-color-8 {
+  background-color: var(--color-purple-8);
+}
+.text-purple-color-8 {
+  color: var(--color-purple-8);
+}
+
+.bg-purple-color-8-5 {
+  background-color: var(--color-purple-8-5);
+}
+.text-purple-color-8-5 {
+  color: var(--color-purple-8-5);
+}
+
+.bg-purple-color-9 {
+  background-color: var(--color-purple-9);
+}
+.text-purple-color-9 {
+  color: var(--color-purple-9);
+}
+
+.bg-purple-color-9-5 {
+  background-color: var(--color-purple-9-5);
+}
+.text-purple-color-9-5 {
+  color: var(--color-purple-9-5);
+}
+
+.bg-purple-color-10 {
+  background-color: var(--color-purple-10);
+}
+.text-purple-color-10 {
+  color: var(--color-purple-10);
+}
+
+/* ==> For the gradient purple */
+.bg-purple-gradient-0 {
+  background-color: var(--color-purple-gradient-0);
+}
+.text-purple-gradient-0 {
+  color: var(--color-purple-gradient-0);
+}
+.bg-purple-gradient-0-5 {
+  background-color: var(--color-purple-gradient-0-5);
+}
+.text-purple-gradient-0-5 {
+  color: var(--color-purple-gradient-0-5);
+}
+.bg-purple-gradient-1 {
+  background-color: var(--color-purple-gradient-1);
+}
+.text-purple-gradient-1 {
+  color: var(--color-purple-gradient-1);
+}
+.bg-purple-gradient-1-5 {
+  background-color: var(--color-purple-gradient-1-5);
+}
+.text-purple-gradient-1-5 {
+  color: var(--color-purple-gradient-1-5);
+}
+.bg-purple-gradient-2 {
+  background-color: var(--color-purple-gradient-2);
+}
+.text-purple-gradient-2 {
+  color: var(--color-purple-gradient-2);
+}
+.bg-purple-gradient-3 {
+  background-color: var(--color-purple-gradient-3);
+}
+.text-purple-gradient-3 {
+  color: var(--color-purple-gradient-3);
+}
+.bg-purple-gradient-4 {
+  background-color: var(--color-purple-gradient-4);
+}
+.text-purple-gradient-4 {
+  color: var(--color-purple-gradient-4);
+}
+.bg-purple-gradient-5 {
+  background-color: var(--color-purple-gradient-5);
+}
+.text-purple-gradient-5 {
+  color: var(--color-purple-gradient-5);
+}
+.bg-purple-gradient-6 {
+  background-color: var(--color-purple-gradient-6);
+}
+.text-purple-gradient-6 {
+  color: var(--color-purple-gradient-6);
+}
+.bg-purple-gradient-7 {
+  background-color: var(--color-purple-gradient-7);
+}
+.text-purple-gradient-7 {
+  color: var(--color-purple-gradient-7);
+}
+.bg-purple-gradient-8 {
+  background-color: var(--color-purple-gradient-8);
+}
+.text-purple-gradient-8 {
+  color: var(--color-purple-gradient-8);
+}
+.bg-purple-gradient-8-5 {
+  background-color: var(--color-purple-gradient-8-5);
+}
+.text-purple-gradient-8-5 {
+  color: var(--color-purple-gradient-8-5);
+}
+.bg-purple-gradient-9 {
+  background-color: var(--color-purple-gradient-9);
+}
+.text-purple-gradient-9 {
+  color: var(--color-purple-gradient-9);
+}
+.bg-purple-gradient-9-5 {
+  background-color: var(--color-purple-gradient-9-5);
+}
+.text-purple-gradient-9-5 {
+  color: var(--color-purple-gradient-9-5);
+}
+.bg-purple-gradient-10 {
+  background-color: var(--color-purple-gradient-10);
+}
+.text-purple-gradient-10 {
+  color: var(--color-purple-gradient-10);
+}
+
+/* ==>Background color:: */
+.bg-gradient {
+  background: linear-gradient(
+    to right,
+    var(--color-purple-5),
+    var(--color-purple-gradient-5)
+  );
+}
+.bg-gradient-image {
+  background: linear-gradient(
+    to left,
+    var(--color-purple-5),
+    var(--color-purple-gradient-5)
+  );
+}
+.bg-gradient-to-bottom {
+  background: linear-gradient(
+    to bottom,
+    var(--color-purple-5),
+    var(--color-purple-gradient-5)
+  );
+}
+.bg-gradient-to-top {
+  background: linear-gradient(
+    to top,
+    var(--color-purple-5),
+    var(--color-purple-gradient-5)
+  );
+}
+.bg-gradient-to-top-lighter {
+  background: linear-gradient(to top, #da33d1, #901ac0);
+}
+
+/* ==> Styling the toggle menu button */
+
+.menu {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+}
+.line {
+  fill: none;
+  stroke: white;
+  stroke-width: 6;
+  transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+    stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.line1 {
+  stroke-dasharray: 60 207;
+  stroke-width: 6;
+}
+.line2 {
+  stroke-dasharray: 60 60;
+  stroke-width: 6;
+}
+.line3 {
+  stroke-dasharray: 60 207;
+  stroke-width: 6;
+}
+.opened .line1 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 6;
+}
+.opened .line2 {
+  stroke-dasharray: 1 60;
+  stroke-dashoffset: -30;
+  stroke-width: 6;
+}
+.opened .line3 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 6;
+}
+
+/* ==> Styling the scrollbar */
+
+/* SCROLLBAR STYLING */
+/* Chrome, Edge, and Safari */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255 0.9) rgba(255, 255, 255, 0.9);
+}
+
+.arabic-char-fix {
+  line-height: 2.5rem;
+  transform: translateY(-2px);
+}
+
+/* Full white background ==> */
+
+.full-bleed {
+  box-shadow: 0 0 0 100vmax #fff;
+  clip-path: inset(0 -100vmax);
+}
+.full-bleed-container {
+  box-shadow: 100vw 0 0 100vmax #4c0a7c, -100vw 0 0 100vmax #b52e94;
+  clip-path: inset(0 -100vmax 0 0), inset(0 0 0 -100vmax);
+}
+.full-bleed-container {
+  box-shadow: -100vw 0 0 100vmax #b52e94, 100vw 0 0 100vmax #4c0a7c;
+  clip-path: inset(0 0 0 -100vmax), inset(0 -100vmax 0 0);
+}
+
+.full-bleed-right {
+  box-shadow: 100vw 0 0 100vmax #4c0a7c;
+  clip-path: inset(0 -100vmax 0 0);
+}
+
+.full-bleed-left {
+  box-shadow: -100vw 0 0 100vmax #b52e94;
+  clip-path: inset(0 0 0 -100vmax);
+}
+
+/* ==> centering using grid system */
+
+.box:last-child:nth-last-child(odd) {
+  grid-column: auto / span 2;
+  place-items: center;
+}
+
+.box:first-child:nth-last-child(even),
+.box:first-child:nth-last-child(even) ~ .box {
+  grid-column: auto / span 1;
+}
+
+@theme {
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+  }
+}
+
+body {
+}
