@@ -6,23 +6,27 @@ import Logo from "../../assets/icons/company-slogan.svg";
 import WhiteBtn from "@/components/WhiteBtn";
 import SwitchLang from "../home/SwitchLang";
 import { usePathname } from "next/navigation";
+
 export default function Header() {
   const router = usePathname();
   const headerRef = useRef(null);
   const IsHomePage =
-    router === "/ar" ||
-    router === "/en" ||
-    router === "/en/about" ||
-    router === "/ar/about";
+    router.endsWith("/ar") ||
+    router.endsWith("/en") ||
+    router.includes("/about");
+
   const t = useTranslations();
   const [toggle, setToggle] = useState(false);
   const { btnText, navigationBar } = t.raw("HomePage").header;
+
   const toggleMenu = () => {
     setToggle((prev) => !prev);
   };
+
   const closeToggle = () => {
     setToggle(false);
   };
+
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (headerRef.current && !headerRef.current.contains(event.target)) {
@@ -30,12 +34,28 @@ export default function Header() {
       }
     };
 
+    const handleEscapeKey = (event) => {
+      if (event.key === "Escape" && toggle) {
+        closeToggle();
+      }
+    };
+
     document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener("keydown", handleEscapeKey);
+
+    if (toggle) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
 
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("keydown", handleEscapeKey);
+      document.body.style.overflow = ""; // Clean up on unmount
     };
   }, [toggle]);
+
   return (
     <div
       className={`sticky mx-auto top-0 z-[3000] lg:py-0 ${
@@ -45,23 +65,21 @@ export default function Header() {
     >
       <header
         ref={headerRef}
-        className={`sticky top-0 z-[3000] max-w-[1600px] mx-auto px-7 ${
-          toggle ? "pt-4 pb-96 -ml-14" : "lg:py-12 py-4"
-        } px-4
-             left-0 right-0
-             flex flex-row justify-between items-center lg:h-[50px]`}
+        className={`sticky top-0 z-[3000] max-w-[1600px] mx-auto px-4 ${
+          toggle ? "py-4" : "lg:py-12 py-4"
+        }
+        left-0 right-0
+        flex flex-row justify-between items-center lg:h-[50px]`}
       >
-        <div className="flex items-center gap-x-4 z-[3500]">
+        <div className="flex items-center lg:gap-x-4 z-[3500]">
           <Link href={"./"}>
             <img
-              className={`sm:max-w-[217px] max-w-[150px] max-h-[86px] ${
-                toggle ? "ml-14" : "ml-0"
-              }`}
+              className="max-w-[217px] max-h-[86px]"
               src={Logo.src}
               alt="Company logo"
             />
           </Link>
-          <div className="lg:block lg:visible hidden invisible">
+          <div className="hidden lg:block">
             <WhiteBtn text={btnText} />
           </div>
         </div>
@@ -86,12 +104,15 @@ export default function Header() {
         </button>
 
         <div
-          className={`lg:static absolute top-[72px] ${
-            toggle ? "flex" : "hidden"
-          } lg:w-auto w-full flex lg:flex-row flex-col lg:gap-x-[180px] justify-between lg:flex h-full lg:h-auto z-[1000] bg-transparent`}
+          className={`lg:static ${
+            toggle ? "fixed inset-0 flex" : "hidden" /* Use fixed and inset-0 */
+          } lg:w-auto w-full flex lg:flex-row flex-col lg:gap-x-[180px] justify-between lg:flex
+          bg-[#4C0A7C] /* Add a background color for the overlay */
+          lg:h-auto overflow-y-auto /* Enable internal scrolling */
+          z-[1000] lg:bg-transparent`}
         >
-          <ul className="text-white flex lg:flex-row-reverse flex-col lg:gap-x-6 gap-y-4 items-center justify-center w-full lg:w-auto lg:py-0 pb-32 font-Inter font-normal text-sm z-[200] bg-transparent ">
-            <div className="lg:block lg:visible none invisible">
+          <ul className="text-white flex lg:flex-row-reverse flex-col lg:gap-x-6 gap-y-4 items-center justify-center w-full lg:w-auto lg:py-0 py-32 font-Inter font-normal text-sm z-[200] bg-transparent">
+            <div className="hidden lg:block">
               <SwitchLang />
             </div>
             <li>
@@ -147,7 +168,7 @@ export default function Header() {
                 {navigationBar[4]}
               </Link>
             </li>
-            <div className="lg:none lg:invisible block visible lg:mt-0 mt-3.5">
+            <div className="block lg:hidden lg:mt-0 mt-3.5">
               <SwitchLang />
             </div>
           </ul>
