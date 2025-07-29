@@ -88,7 +88,7 @@ export default function Header() {
           onClick={toggleMenu}
           className={`menu ${
             toggle ? "opened" : ""
-          } lg:invisible visible z-[4000]`}
+          } lg:invisible visible z-[4000] md:mr-4 lg:mr-0 mr-2`}
         >
           <svg width="40" height="40" viewBox="0 0 100 100">
             <path
