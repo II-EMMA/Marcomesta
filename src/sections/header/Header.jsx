@@ -52,7 +52,7 @@ export default function Header() {
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
       document.removeEventListener("keydown", handleEscapeKey);
-      document.body.style.overflow = ""; // Clean up on unmount
+      document.body.style.overflow = "";
     };
   }, [toggle]);
 
@@ -105,13 +105,13 @@ export default function Header() {
 
         <div
           className={`lg:static ${
-            toggle ? "fixed inset-0 flex" : "hidden" /* Use fixed and inset-0 */
+            toggle ? "fixed inset-0 flex" : "hidden"
           } lg:w-auto w-full flex lg:flex-row flex-col lg:gap-x-[180px] justify-between lg:flex
-          bg-[#4C0A7C] /* Add a background color for the overlay */
-          lg:h-auto overflow-y-auto /* Enable internal scrolling */
+          bg-[#4C0A7C] 
+          lg:h-auto overflow-y-auto 
           z-[1000] lg:bg-transparent`}
         >
-          <ul className="text-white flex lg:flex-row-reverse flex-col lg:gap-x-6 gap-y-8 items-center justify-center w-full lg:w-auto lg:py-0 py-32 font-Inter font-normal text-sm z-[200] bg-transparent">
+          <ul className="text-white flex lg:flex-row-reverse flex-col lg:gap-x-6 md:gap-y-12 gap-y-8 lg:gap-y-0 items-center justify-center w-full lg:w-auto lg:py-0 md:py-40 py-32 font-Inter font-normal lg:text-sm md:text-3xl sm:text-lg text-sm z-[200] bg-transparent">
             <div className="hidden lg:block">
               <SwitchLang />
             </div>

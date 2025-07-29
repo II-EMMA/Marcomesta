@@ -4,11 +4,11 @@ import CustomBtn from "./CustomBtn";
 
 export default function ContactContainer({ subTitle, btnTextOne, btnTextTwo }) {
   return (
-    <div className="w-9/12 mx-auto rounded-[40px] bg-purple-gradient-5 xl:py-6 lg:py-16 md:py-32 py-20 mt-10 flex flex-col items-center">
+    <div className="lg:w-9/12 w-11/12 mx-auto rounded-[40px] bg-purple-gradient-5 xl:py-6 lg:py-16 md:py-14 py-20 mt-10 flex flex-col items-center">
       <h3 className="text-white text-[32px] font-normal text-center [text-shadow:4px_4px_2px_rgba(0,0,0,0.25)] bg-transparent">
         {subTitle}
       </h3>
-      <div className="flex lg:flex-row lg:gap-x-9 flex-col gap-y-9 lg:gap-y-0 mt-10">
+      <div className="flex md:flex-row md:gap-x-9 flex-col gap-y-9 lg:gap-y-0 mt-10">
         <CustomBtn className=" bg-white text-gray-color py-3 sm:px-20 px-11 rounded-[23px] text-sm hover:border-2  outline-0 border-2 border-[#4C0A7C] hover:shadow-lg hover:shadow-black/30">
           {btnTextTwo}
         </CustomBtn>
@@ -16,7 +16,7 @@ export default function ContactContainer({ subTitle, btnTextOne, btnTextTwo }) {
           {btnTextOne}
         </CustomBtn>
       </div>
-      <div className="flex lg:flex-row lg:gap-x-10 flex-col gap-y-6 lg:gap-y-0 mt-10 lg:items-stretch items-center">
+      <div className="flex md:flex-row md:gap-x-10 flex-col gap-y-6 md:gap-y-0 mt-10 md:items-stretch items-center">
         <div className="flex md:flex-row md:gap-x-4 flex-col gap-y-6 md:gap-y-0 items-center">
           <img
             className="max-w-[62px] max-h-[33px]"

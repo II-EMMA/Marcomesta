@@ -43,7 +43,7 @@ export default async function HomePage() {
           <div className="relative z-30 sm:mx-0 mx-4">
             <Link href={Vector.src} target="_blank" rel="noopener noreferrer">
               <img
-                className="md:max-w-[650px] md:max-h-[700px] sm:max-w-[500px] sm:max-h-[600px] max-w-[400px] max-h-[500px]"
+                className="md:max-w-[650px] md:max-h-[700px] sm:max-w-[500px] sm:max-h-[600px] max-w-[350px] max-h-[500px]"
                 src={Vector.src}
                 alt="Object vector"
               />
@@ -55,7 +55,7 @@ export default async function HomePage() {
                 rel="noopener noreferrer"
               >
                 <img
-                  className="md:max-w-[610px] md:max-h-[610px] sm:max-w-[420px] sm:max-h-[500px] max-w-[350px] max-h-[400px]"
+                  className="md:max-w-[610px] md:max-h-[610px] sm:max-w-[420px] sm:max-h-[500px] max-w-[320px] max-h-[400px]"
                   src={HeroSectionImage.src}
                   alt="Home Page Image"
                 />
