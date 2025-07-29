@@ -85,7 +85,7 @@ export default async function page() {
             </div>
           </div>
         </div>
-        <div className="mt-40 grid lg:gap-x-96 gap-x-40 lg:gap-y-40 gap-y-32 items-center mx-auto md:grid-cols-2 place-items-center">
+        <div className="lg:mt-40 md:mt-32 mt-28  grid lg:gap-x-96 gap-x-40 lg:gap-y-40 gap-y-32 items-center mx-auto md:grid-cols-2 place-items-center">
           {updatedCardsInfo.map((card, index) => (
             <div
               key={index}
@@ -133,7 +133,7 @@ export default async function page() {
             </div>
           ))}
         </div>
-        <div className="mt-48 flex flex-col items-center">
+        <div className="lg:mt-32 mt-24 flex flex-col items-center">
           <h5 className="text-xl text-purple-gradient-5 leading-11 text-center max-w-[800px]">
             {helpText}
           </h5>
