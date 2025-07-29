@@ -24,7 +24,7 @@ export default async function page() {
           <div className="flex xl:flex-row xl:gap-x-20 flex-col gap-y-20 xl:gap-y-0 mt-5 xl:justify-between items-center xl:items-stretch mx-10">
             <form
               action=""
-              className="flex flex-col xl:w-auto w-full flex-grow xl:gap-y-0 gap-y-16 mt-16 xl:mt-0"
+              className="flex text-white sm:text-3xl text-2xl flex-col xl:w-auto w-full flex-grow xl:gap-y-0 gap-y-16 mt-16 xl:mt-0"
             >
               <input
                 type="text"
