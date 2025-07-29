@@ -15,7 +15,7 @@ export default async function HomePage() {
     <section className="relative z-40 w-screen left-1/2 -translate-x-1/2 bg-white">
       <GradientScreen />
 
-      <div className="flex flex-col max-w-[1500px] mx-auto bg-gradient md:pt-10 -mt-1 md:mt-0 pb-20">
+      <div className="flex flex-col max-w-[1500px] mx-auto bg-gradient md:pt-20 -mt-1 md:mt-0 pb-20">
         <div
           className={`z-50 flex lg:flex-row flex-col md:gap-y-32 gap-y-24  lg:gap-y-0 items-center lg:gap-x-2 justify-between mt-10 ${
             isArabic ? "lg:ml-3 xl:mr-16 lg:mr-8" : "lg:mr-3 xl:ml-16 lg:ml-8"
