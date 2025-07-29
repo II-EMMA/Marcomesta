@@ -15,7 +15,7 @@ export default async function page() {
   const { name, city, email, phone, more } = t.raw("Contact").placeholders;
   return (
     <div className="overflow-x-hidden">
-      <section className="relative z-40 bg-gradient-to-top w-screen left-1/2 -translate-x-1/2 py-20">
+      <section className="relative z-40 bg-gradient-to-top w-screen left-1/2 -translate-x-1/2 lg:py-20 md:pt-16 pt-12 pb-20">
         <GradientScreenTopToBottom />
         <div className="flex flex-col max-w-[1500px] mx-auto px-5">
           <h1 className="text-white font-bold text-[64px] xl:text-start text-center">
