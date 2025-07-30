@@ -43,7 +43,7 @@ export default function Footer() {
               />
             </div>
             <div className="flex xl:flex-row xl:gap-x-4 flex-col gap-y-7 xl:gap-y-0 items-center">
-              <p className="text-black font-normal text-base ">
+              <p className="text-black font-normal text-base " dir="ltr">
                 +(966) 58 88 22 553
               </p>
               <img
