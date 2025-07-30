@@ -26,14 +26,21 @@ export default function SwitchLangDropdown() {
   return (
     <div className="relative">
       <select
+        id="langs"
         onChange={handleChangeLocale}
         value={currentLocale}
-        className=" block appearance-none text-base w-full border border-gray-300 hover:border-gray-400 px-4 py-2 pr-8 rounded-full shadow leading-tight focus:outline-none focus:shadow-outline text-white bg-transparent "
+        className="block appearance-none text-base border border-gray-300 hover:border-white/70 transition-all duration-200 px-4 py-2 pr-8 rounded-full shadow leading-tight focus:outline-none text-white bg-transparent"
       >
-        <option value="en" className="text-black text-sm">
+        <option
+          value="en"
+          className="text-black text-sm bg-[#4c0a7c] rounded-full focus:bg-[#4c0a7c]/70 border border-white "
+        >
           EN
         </option>
-        <option value="ar" className="text-black text-sm">
+        <option
+          value="ar"
+          className="text-black text-sm bg-[#4c0a7c] rounded-full hover:bg-[#4c0a7c]/70"
+        >
           AR
         </option>
       </select>
