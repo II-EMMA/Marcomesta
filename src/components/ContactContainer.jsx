@@ -18,24 +18,24 @@ export default function ContactContainer({ subTitle, btnTextOne, btnTextTwo }) {
       </div>
       <div className="flex md:flex-row md:gap-x-10 flex-col gap-y-6 md:gap-y-0 mt-10 md:items-stretch items-center">
         <div className="flex md:flex-row md:gap-x-4 flex-col gap-y-6 md:gap-y-0 items-center">
+          <p className="text-white font-normal ms:text-base text-sm">
+            info@marcomesta.com
+          </p>
           <img
             className="max-w-[62px] max-h-[33px]"
             src={Email.src}
             alt="Email"
           />
-          <p className="text-white font-normal ms:text-base text-sm">
-            info@marcomesta.com
-          </p>
         </div>
         <div className="flex md:flex-row md:gap-x-4 flex-col gap-y-6 md:gap-y-0 items-center">
+          <p className="text-white font-normal ms:text-base text-sm">
+            +(966) 58 88 22 553
+          </p>
           <img
             className="max-w-[45px] max-h-[45px]"
             src={Human.src}
             alt="Human"
           />
-          <p className="text-white font-normal ms:text-base text-sm">
-            +(966) 553 22 88 58
-          </p>
         </div>
       </div>
     </div>

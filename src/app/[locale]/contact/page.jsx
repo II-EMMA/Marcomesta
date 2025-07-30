@@ -12,7 +12,7 @@ import CustomBtn from "@/components/CustomBtn";
 export default async function page() {
   const t = await getTranslations();
   const { title, btnText } = t.raw("Contact");
-  const { name, city, email, phone, more } = t.raw("Contact").placeholders;
+  const { name, city, email, phone, message } = t.raw("Contact").placeholders;
   return (
     <div className="overflow-x-hidden">
       <section className="relative z-40 bg-gradient-to-top w-screen left-1/2 -translate-x-1/2 md:py-20 pt-12 pb-20">
@@ -52,13 +52,13 @@ export default async function page() {
                 id="phone"
                 name="phone"
                 placeholder={phone}
-                className="flex-grow border-b border-white placeholder:text-white outline-0 xl:text-base xl:pb-0 sm:text-3xl text-2xl pb-8"
+                className="flex-grow border-b border-white placeholder:text-white outline-0 xl:text-base xl:pb-0 sm:text-3xl text-2xl pb-8 no-spinner"
               />
               <input
                 type="text"
-                id="more"
-                name="more"
-                placeholder={more}
+                id="message"
+                name="message"
+                placeholder={message}
                 className="flex-grow border-b border-white placeholder:text-white outline-0 xl:text-base xl:pb-0 sm:text-3xl text-2xl pb-8"
               />
               <CustomBtn className="self-center cursor-pointer mt-14 bg-[#b52e94] py-3 sm:px-40 w-full md:w-auto text-xl border border-white/25 hover:bg-white hover:text-[#b52e94] ">

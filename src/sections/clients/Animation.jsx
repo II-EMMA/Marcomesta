@@ -1,37 +1,63 @@
 "use client";
 import { motion } from "framer-motion";
 import { useLocale } from "next-intl";
-import Othaim from "../../assets/icons/othaim.svg";
-import Almanea from "../../assets/icons/almanea.svg";
-import Est from "../../assets/icons/est.svg";
-import RoyalCommission from "../../assets/icons/royal-commission.svg";
-import Sinopec from "../../assets/icons/sinopec.svg";
+// import Othaim from "../../assets/icons/othaim.svg";
+// import Almanea from "../../assets/icons/almanea.svg";
+// import Est from "../../assets/icons/est.svg";
+// import RoyalCommission from "../../assets/icons/royal-commission.svg";
+// import Sinopec from "../../assets/icons/sinopec.svg";
+import Logo from "../../assets/images/company-logo.svg";
 
 const images = [
+  // {
+  //   src: Othaim.src,
+  //   alt: "Othaim",
+  //   style: "w-[92px] h-[126px]",
+  // },
+  // {
+  //   src: Almanea.src,
+  //   alt: "Almanea",
+  //   style: "w-[268px] h-[148px]",
+  // },
+  // {
+  //   src: Est.src,
+  //   alt: "Est",
+  //   style: "w-[182px] h-[95px]",
+  // },
+  // {
+  //   src: RoyalCommission.src,
+  //   alt: "Royal Commission",
+  //   style: "w-[253px] h-[70px]",
+  // },
+  // {
+  //   src: Sinopec.src,
+  //   alt: "Sinopec",
+  //   style: "w-[277px] h-[73px]",
+  // },
   {
-    src: Othaim.src,
-    alt: "Othaim",
-    style: "w-[92px] h-[126px]",
+    src: Logo.src,
+    alt: "Company Logo",
+    style: "max-w-[250px] max-h-[231px]",
   },
   {
-    src: Almanea.src,
-    alt: "Almanea",
-    style: "w-[268px] h-[148px]",
+    src: Logo.src,
+    alt: "Company Logo",
+    style: "max-w-[250px] max-h-[231px]",
   },
   {
-    src: Est.src,
-    alt: "Est",
-    style: "w-[182px] h-[95px]",
+    src: Logo.src,
+    alt: "Company Logo",
+    style: "max-w-[250px] max-h-[231px]",
   },
   {
-    src: RoyalCommission.src,
-    alt: "Royal Commission",
-    style: "w-[253px] h-[70px]",
+    src: Logo.src,
+    alt: "Company Logo",
+    style: "max-w-[250px] max-h-[231px]",
   },
   {
-    src: Sinopec.src,
-    alt: "Sinopec",
-    style: "w-[277px] h-[73px]",
+    src: Logo.src,
+    alt: "Company Logo",
+    style: "max-w-[250px] max-h-[231px]",
   },
 ];
 

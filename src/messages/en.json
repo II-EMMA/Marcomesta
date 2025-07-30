@@ -55,7 +55,7 @@
       "city": "City",
       "email": "Email",
       "phone": "Phone",
-      "more": "More"
+      "message": "Message"
     },
     "btnText": "Send"
   },

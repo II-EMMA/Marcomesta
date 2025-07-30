@@ -80,7 +80,9 @@ export default function Header() {
             />
           </Link>
           <div className="hidden lg:block">
-            <WhiteBtn text={btnText} />
+            <Link href={"./services"}>
+              <WhiteBtn text={btnText} />
+            </Link>
           </div>
         </div>
 
@@ -139,7 +141,7 @@ export default function Header() {
 
             <li>
               <Link
-                href={"./services"}
+                href={"#read"}
                 onClick={closeToggle}
                 className="hover:text-white/40 transition-all duration-200 ease-in-out"
               >

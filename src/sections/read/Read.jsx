@@ -7,7 +7,10 @@ export default async function Read() {
   const t = await getTranslations();
   const { description, btnText } = t.raw("Read");
   return (
-    <section className="full-bleed bg-white flex flex-col items-center justify-center max-w-[1500px] mx-auto pt-7 pb-14">
+    <section
+      id="read"
+      className="full-bleed bg-white flex flex-col items-center justify-center max-w-[1500px] mx-auto pt-7 pb-14"
+    >
       <Link href={Logo.src} target="_blank" rel="noopener noreferrer">
         <img
           className="sm:max-w-[419px] max-w-[300px] max-h-[231px]"
