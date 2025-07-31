@@ -11,6 +11,10 @@ export default async function HomePage() {
   const isArabic = lang === "ar";
   const { title, subTitle, description, btnText } = t.raw("HomePage");
 
+  const getLocalizedContactPath = () => {
+    return `/${lang}/contact`;
+  };
+
   return (
     <section className="relative z-40 w-screen left-1/2 -translate-x-1/2 bg-white">
       <GradientScreen />
@@ -38,7 +42,7 @@ export default async function HomePage() {
             <span className="h-0.5 w-24 bg-white mt-6" />
             <div className="self-center lg:self-start">
               <Link
-                href="./contact"
+                href={getLocalizedContactPath()}
                 className="lg:w-auto w-full py-4 sm:px-32 mx-2 sm:mx-0"
               >
                 <CustomBtn className="self-center lg:self-start cursor-pointer mt-14 bg-[#b52e94] py-4 sm:px-32 w-full mx-2 sm:mx-0 text-xl border border-white hover:bg-white hover:text-[#b52e94] ">

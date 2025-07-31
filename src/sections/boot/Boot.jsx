@@ -9,6 +9,11 @@ export default async function Boot() {
   const lang = await getLocale();
   const isArabic = lang === "ar";
   const { title, subTitle, btnText } = t.raw("Boot");
+
+  const getLocalizedContactPath = () => {
+    return `/${lang}/contact`;
+  };
+
   return (
     <>
       <section className="mx-auto max-w-[1500px] flex xl:flex-row flex-col gap-y-72 items-center xl:items-stretch xl:justify-between">
@@ -29,7 +34,7 @@ export default async function Boot() {
           </h4>
           <div className="self-center xl:self-start">
             <Link
-              href="./contact"
+              href={getLocalizedContactPath()}
               className="lg:w-auto w-full py-4 sm:px-32 mx-2 sm:mx-0"
             >
               <CustomBtn className="mt-12 bg-[#b52e94] py-4 sm:px-32 px-14 mx-2 sm:mx-0 text-xl  hover:border hover:border-[#b52e94] hover:text-[#b52e94] hover:bg-white outline-0 border border-[#4C0A7C] shadow-lg shadow-black/25">
