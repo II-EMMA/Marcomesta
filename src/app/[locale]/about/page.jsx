@@ -120,7 +120,13 @@ export default async function page() {
             </div>
           ))}
         </div>
-        <div className="mt-14 grid md:gap-6 gap-10 items-center md:grid-cols-2 text-center md:text-start">
+        <div
+          className={`2xl:mt-20 xl:mt-24 mt-14 grid md:gap-6 gap-10 items-center md:grid-cols-2 text-center md:text-start  ${
+            isArabic
+              ? "xl:mr-44 lg:mr-20 mr-0 ml-0"
+              : "2xl:ml-44 xl:ml-20 lg:ml-8  ml-0 mr-0"
+          } `}
+        >
           {smallCards.map((card, index) => (
             <div key={index} className="flex flex-col gap-y-2">
               <h4 className="self-center md:self-start text-base font-bold flex flex-row items-center text-purple-gradient-5">

@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { TbArrowRightToArc } from "react-icons/tb";
 export default function WhiteBtn({ className, text }) {
   return (

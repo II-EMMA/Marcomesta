@@ -6,7 +6,8 @@ import { useLocale } from "next-intl";
 // import Est from "../../assets/icons/est.svg";
 // import RoyalCommission from "../../assets/icons/royal-commission.svg";
 // import Sinopec from "../../assets/icons/sinopec.svg";
-import Logo from "../../assets/images/company-logo.svg";
+// import Logo from "../../assets/images/company-logo.svg";
+import Logo from "../../assets/images/new-company-logo.png";
 
 const images = [
   // {
@@ -34,30 +35,35 @@ const images = [
   //   alt: "Sinopec",
   //   style: "w-[277px] h-[73px]",
   // },
+  // {
+  //   src: Logo.src,
+  //   alt: "Company Logo",
+  //   style: "max-w-[250px] max-h-[231px]",
+  // },
   {
     src: Logo.src,
     alt: "Company Logo",
-    style: "max-w-[250px] max-h-[231px]",
+    style: "max-w-[180px] max-h-[180px]",
   },
   {
     src: Logo.src,
     alt: "Company Logo",
-    style: "max-w-[250px] max-h-[231px]",
+    style: "max-w-[180px] max-h-[180px]",
   },
   {
     src: Logo.src,
     alt: "Company Logo",
-    style: "max-w-[250px] max-h-[231px]",
+    style: "max-w-[180px] max-h-[180px]",
   },
   {
     src: Logo.src,
     alt: "Company Logo",
-    style: "max-w-[250px] max-h-[231px]",
+    style: "max-w-[180px] max-h-[180px]",
   },
   {
     src: Logo.src,
     alt: "Company Logo",
-    style: "max-w-[250px] max-h-[231px]",
+    style: "max-w-[180px] max-h-[180px]",
   },
 ];
 
