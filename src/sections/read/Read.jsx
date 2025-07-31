@@ -10,7 +10,7 @@ export default async function Read() {
   return (
     <section
       id={`${lang}/read`}
-      className="full-bleed bg-white flex flex-col items-center justify-center max-w-[1500px] mx-auto md:pt-20 pt-7 md:-mb-14 -mb-40"
+      className="full-bleed bg-white flex flex-col items-center justify-center max-w-[1500px] mx-auto md:pt-20 pt-7 md:-mb-20 -mb-40"
     >
       <Link href={Logo.src} target="_blank" rel="noopener noreferrer">
         <img

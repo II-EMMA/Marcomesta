@@ -134,7 +134,7 @@ export default function Header() {
 
             <li>
               <Link
-                href={getLocalizedPath("/")}
+                href={getLocalizedPath("./")}
                 onClick={closeToggle}
                 className="hover:text-white/40 transition-all duration-200 ease-in-out"
               >
@@ -145,7 +145,7 @@ export default function Header() {
 
             <li>
               <Link
-                href={getLocalizedPath("/about")}
+                href={getLocalizedPath("./about")}
                 onClick={closeToggle}
                 className="hover:text-white/40 transition-all duration-200 ease-in-out"
               >
@@ -178,7 +178,7 @@ export default function Header() {
 
             <li>
               <Link
-                href={getLocalizedPath("/contact")}
+                href={getLocalizedPath("./contact")}
                 onClick={closeToggle}
                 className="hover:text-white/40 transition-all duration-200 ease-in-out"
               >
