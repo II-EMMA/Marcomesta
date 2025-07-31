@@ -65,7 +65,7 @@ export default async function page() {
                 {btnText}
               </CustomBtn>
             </form>
-            <div className="ml-20 z-30 md:flex flex-col mt-28 mb-[119px] relative  hidden">
+            <div className="ml-20 z-30 md:flex flex-col mt-28 mb-[119px] relative hidden">
               <img
                 className="max-w-[536px] max-h-[325px]"
                 src={Screen.src}

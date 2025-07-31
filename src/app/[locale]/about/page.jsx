@@ -124,7 +124,7 @@ export default async function page() {
           className={`2xl:mt-20 xl:mt-24 mt-14 grid md:gap-6 gap-10 items-center md:grid-cols-2 text-center md:text-start  ${
             isArabic
               ? "xl:mr-44 lg:mr-20 mr-0 ml-0"
-              : "2xl:ml-44 xl:ml-20 lg:ml-8  ml-0 mr-0"
+              : "2xl:ml-40 xl:ml-20 lg:ml-8  ml-0 mr-0"
           } `}
         >
           {smallCards.map((card, index) => (
