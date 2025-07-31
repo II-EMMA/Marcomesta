@@ -111,7 +111,7 @@ export default async function page() {
               </p>
             </div>
           </div>
-          <div className="h-[3px] w-8/12 bg-white/70 block self-center mt-24" />
+          <span className="h-[3px] w-8/12 bg-white/70 block self-center mt-24" />
         </div>
       </section>
     </div>
