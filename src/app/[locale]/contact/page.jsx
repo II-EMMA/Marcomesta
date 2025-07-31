@@ -86,7 +86,7 @@ export default async function page() {
                 src={Flowers.src}
                 alt="Flowers"
               />
-              <div className="absolute -bottom-1 -right-10 h-1 w-[calc(100%+100px)] bg-white block" />
+              <div className="absolute -bottom-1 -right-10 h-1 w-[calc(100%+100px)] bg-white md:block hidden" />
             </div>
           </div>
           <div className="flex xl:flex-row flex-col xl:justify-between items-center xl:mx-72 mt-24 xl:gap-x-4 xl:gap-y-0 gap-y-10">
