@@ -106,7 +106,7 @@ export default async function page() {
                 src={Human.src}
                 alt="Human"
               />
-              <p className="text-white font-bold sm:text-2xl text-xl">
+              <p className="text-white font-bold sm:text-2xl text-xl" dir="ltr">
                 +(966) 553 22 88 58
               </p>
             </div>

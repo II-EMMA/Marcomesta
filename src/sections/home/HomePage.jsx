@@ -36,11 +36,16 @@ export default async function HomePage() {
               {description}
             </p>
             <span className="h-0.5 w-24 bg-white mt-6" />
-            <Link href="./contact">
-              <CustomBtn className="self-center lg:self-start cursor-pointer mt-14 bg-[#b52e94] py-4 sm:px-32 w-full mx-2 sm:mx-0 text-xl border border-white hover:bg-white hover:text-[#b52e94] ">
-                {btnText}
-              </CustomBtn>
-            </Link>
+            <div className="self-center lg:self-start">
+              <Link
+                href="./contact"
+                className="lg:w-auto w-full py-4 sm:px-32 mx-2 sm:mx-0"
+              >
+                <CustomBtn className="self-center lg:self-start cursor-pointer mt-14 bg-[#b52e94] py-4 sm:px-32 w-full mx-2 sm:mx-0 text-xl border border-white hover:bg-white hover:text-[#b52e94] ">
+                  {btnText}
+                </CustomBtn>
+              </Link>
+            </div>
           </div>
           <div className="relative z-30 sm:mx-0 mx-4">
             <Link href={Vector.src} target="_blank" rel="noopener noreferrer">

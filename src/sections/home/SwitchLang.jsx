@@ -1,12 +1,13 @@
 "use client";
 
 import { useLocale } from "next-intl";
-import { useRouter, usePathname } from "next/navigation";
+import { useRouter, usePathname, useSearchParams } from "next/navigation";
 
 export default function SwitchLangDropdown() {
   const currentLocale = useLocale();
   const router = useRouter();
   const pathname = usePathname();
+  const searchParams = useSearchParams();
 
   const handleChangeLocale = (event) => {
     const targetLocale = event.target.value;
@@ -15,10 +16,24 @@ export default function SwitchLangDropdown() {
       return;
     }
 
-    const pathWithoutLocale = pathname.replace(`/${currentLocale}`, "");
-    const newPath = `/${targetLocale}${
-      pathWithoutLocale === "" ? "" : pathWithoutLocale
+    const pathWithoutLocaleAndHash = pathname
+      .replace(`/${currentLocale}`, "")
+      .split("#")[0];
+    const currentHash = window.location.hash;
+
+    const queryString = searchParams.toString();
+
+    let newPath = `/${targetLocale}${
+      pathWithoutLocaleAndHash === "" ? "" : pathWithoutLocaleAndHash
     }`;
+
+    if (queryString) {
+      newPath += `?${queryString}`;
+    }
+
+    if (currentHash) {
+      newPath += currentHash;
+    }
 
     router.push(newPath);
   };

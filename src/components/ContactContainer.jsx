@@ -28,11 +28,9 @@ export default function ContactContainer({ subTitle, btnTextOne, btnTextTwo }) {
           />
         </div>
         <div className="flex md:flex-row md:gap-x-4 flex-col gap-y-6 md:gap-y-0 items-center">
-          <div dir="ltr">
-            <p className="text-white font-normal ms:text-base text-sm">
-              +(966) 58 88 22 553
-            </p>
-          </div>
+          <p className="text-white font-normal ms:text-base text-sm" dir="ltr">
+            +(966) 58 88 22 553
+          </p>
           <img
             className="max-w-[45px] max-h-[45px]"
             src={Human.src}

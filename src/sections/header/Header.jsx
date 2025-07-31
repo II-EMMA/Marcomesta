@@ -1,23 +1,27 @@
 "use client";
-import { useTranslations } from "next-intl";
+
+import { useTranslations, useLocale } from "next-intl";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
+import { usePathname } from "next/navigation";
+
 import Logo from "../../assets/icons/company-slogan.svg";
 import WhiteBtn from "@/components/WhiteBtn";
 import SwitchLang from "../home/SwitchLang";
-import { usePathname } from "next/navigation";
 
 export default function Header() {
-  const router = usePathname();
-  const headerRef = useRef(null);
-  const IsHomePage =
-    router.endsWith("/ar") ||
-    router.endsWith("/en") ||
-    router.includes("/about");
+  const pathname = usePathname();
+  const currentLocale = useLocale();
 
+  const headerRef = useRef(null);
   const t = useTranslations();
+
   const [toggle, setToggle] = useState(false);
   const { btnText, navigationBar } = t.raw("HomePage").header;
+
+  const IsHomePageOrAbout =
+    pathname === `/${currentLocale}` ||
+    pathname.startsWith(`/${currentLocale}/about`);
 
   const toggleMenu = () => {
     setToggle((prev) => !prev);
@@ -25,6 +29,19 @@ export default function Header() {
 
   const closeToggle = () => {
     setToggle(false);
+  };
+
+  const getLocalizedPath = (pathSegment) => {
+    if (pathSegment === "/" || pathSegment === "./") {
+      return `/${currentLocale}`;
+    }
+    if (pathSegment === "#read" || pathSegment === "#contact") {
+      return `/${currentLocale}${pathSegment}`;
+    }
+    const cleanPathSegment = pathSegment.startsWith("/")
+      ? pathSegment
+      : `/${pathSegment}`;
+    return `/${currentLocale}${cleanPathSegment}`;
   };
 
   useEffect(() => {
@@ -43,11 +60,7 @@ export default function Header() {
     document.addEventListener("mousedown", handleClickOutside);
     document.addEventListener("keydown", handleEscapeKey);
 
-    if (toggle) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-    }
+    document.body.style.overflow = toggle ? "hidden" : "";
 
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
@@ -59,7 +72,7 @@ export default function Header() {
   return (
     <div
       className={`sticky mx-auto top-0 z-[3000] lg:py-0 ${
-        IsHomePage ? "bg-gradient" : "bg-[#4C0A7C]"
+        IsHomePageOrAbout ? "bg-gradient" : "bg-[#4C0A7C]"
       } w-full`}
       dir="ltr"
     >
@@ -72,7 +85,7 @@ export default function Header() {
         flex flex-row justify-between items-center lg:h-[50px]`}
       >
         <div className="flex items-center lg:gap-x-4 z-[3500]">
-          <Link href={"./"}>
+          <Link href={getLocalizedPath("/")} onClick={closeToggle}>
             <img
               className="max-w-[217px] max-h-[86px]"
               src={Logo.src}
@@ -80,7 +93,7 @@ export default function Header() {
             />
           </Link>
           <div className="hidden lg:block">
-            <Link href={"./services"}>
+            <Link href={getLocalizedPath("/services")} onClick={closeToggle}>
               <WhiteBtn text={btnText} />
             </Link>
           </div>
@@ -91,6 +104,7 @@ export default function Header() {
           className={`menu ${
             toggle ? "opened" : ""
           } lg:invisible visible z-[4000] md:mr-4 lg:mr-0 mr-2`}
+          aria-label="Toggle menu"
         >
           <svg width="40" height="40" viewBox="0 0 100 100">
             <path
@@ -109,17 +123,18 @@ export default function Header() {
           className={`lg:static ${
             toggle ? "fixed inset-0 flex" : "hidden"
           } lg:w-auto w-full flex lg:flex-row flex-col lg:gap-x-[180px] justify-between lg:flex
-          bg-[#4C0A7C] 
-          lg:h-auto overflow-y-auto 
+          bg-[#4C0A7C]
+          lg:h-auto overflow-y-auto
           z-[1000] lg:bg-transparent`}
         >
           <ul className="text-white flex lg:flex-row-reverse flex-col lg:gap-x-6 md:gap-y-12 gap-y-8 lg:gap-y-0 items-center justify-center w-full lg:w-auto lg:py-0 md:py-40 py-32 font-Inter font-normal lg:text-sm md:text-3xl sm:text-lg text-sm z-[200] bg-transparent">
             <div className="hidden lg:block">
               <SwitchLang />
             </div>
+
             <li>
               <Link
-                href={"./"}
+                href={getLocalizedPath("/")}
                 onClick={closeToggle}
                 className="hover:text-white/40 transition-all duration-200 ease-in-out"
               >
@@ -130,7 +145,7 @@ export default function Header() {
 
             <li>
               <Link
-                href={"./about"}
+                href={getLocalizedPath("/about")}
                 onClick={closeToggle}
                 className="hover:text-white/40 transition-all duration-200 ease-in-out"
               >
@@ -141,7 +156,7 @@ export default function Header() {
 
             <li>
               <Link
-                href={"./#read"}
+                href={getLocalizedPath(`#${currentLocale}/read`)}
                 onClick={closeToggle}
                 className="hover:text-white/40 transition-all duration-200 ease-in-out"
               >
@@ -152,7 +167,7 @@ export default function Header() {
 
             <li>
               <Link
-                href={"./#clients"}
+                href={getLocalizedPath(`#${currentLocale}/clients`)}
                 onClick={closeToggle}
                 className="hover:text-white/40 transition-all duration-200 ease-in-out"
               >
@@ -163,7 +178,7 @@ export default function Header() {
 
             <li>
               <Link
-                href={"./contact"}
+                href={getLocalizedPath("/contact")}
                 onClick={closeToggle}
                 className="hover:text-white/40 transition-all duration-200 ease-in-out"
               >

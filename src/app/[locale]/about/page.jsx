@@ -5,7 +5,7 @@ import Link from "next/link";
 import { IoStarSharp } from "react-icons/io5";
 import SectionImage from "../../../assets/images/who-we-are.svg";
 import { getLocale, getTranslations } from "next-intl/server";
-import ContactContainer from "@/components/ContactContainer";
+// import ContactContainer from "@/components/ContactContainer";
 
 const cardsInfo = [
   {
@@ -32,11 +32,11 @@ export default async function page() {
   const { title, descriptions, helpText } = t.raw("About");
   const translatedCards = t.raw("About").cards;
   const smallCards = t.raw("About").smallCards;
-  const {
-    title: contactUsTitle,
-    btnTextOne,
-    btnTextTwo,
-  } = t.raw("About").ContactUs;
+  // const {
+  //   title: contactUsTitle,
+  //   btnTextOne,
+  //   btnTextTwo,
+  // } = t.raw("About").ContactUs;
 
   const updatedCardsInfo = cardsInfo.map((card, index) => {
     const translatedCardData = translatedCards[index];
@@ -137,11 +137,11 @@ export default async function page() {
           <h5 className="text-xl text-purple-gradient-5 leading-11 text-center max-w-[800px]">
             {helpText}
           </h5>
-          <ContactContainer
+          {/* <ContactContainer
             subTitle={contactUsTitle}
             btnTextOne={btnTextOne}
             btnTextTwo={btnTextTwo}
-          />
+          /> */}
         </div>
       </section>
     </div>

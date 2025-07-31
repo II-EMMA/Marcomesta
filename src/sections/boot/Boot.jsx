@@ -27,9 +27,16 @@ export default async function Boot() {
           <h4 className="text-gray-color text-2xl leading-12 font-normal max-w-[820px]">
             {subTitle}
           </h4>
-          <CustomBtn className="xl:self-start self-center mt-12 bg-[#b52e94] py-4 sm:px-32 px-14 mx-2 sm:mx-0 text-xl  hover:border hover:border-[#b52e94] hover:text-[#b52e94] hover:bg-white outline-0 border border-[#4C0A7C] shadow-lg shadow-black/25">
-            {btnText}
-          </CustomBtn>
+          <div className="self-center xl:self-start">
+            <Link
+              href="./contact"
+              className="lg:w-auto w-full py-4 sm:px-32 mx-2 sm:mx-0"
+            >
+              <CustomBtn className="mt-12 bg-[#b52e94] py-4 sm:px-32 px-14 mx-2 sm:mx-0 text-xl  hover:border hover:border-[#b52e94] hover:text-[#b52e94] hover:bg-white outline-0 border border-[#4C0A7C] shadow-lg shadow-black/25">
+                {btnText}
+              </CustomBtn>
+            </Link>
+          </div>
         </div>
         <div className="relative -mt-48 z-40">
           <Link href={BootImage.src} target="_blank" rel="noopener noreferrer">

@@ -6,7 +6,7 @@ import WhatsAppImage from "../../assets/icons/whatsapp.svg";
 
 export default function Image() {
   return (
-    <section className="relative mx-auto max-w-[1440px] mt-20 w-full z-20">
+    <section className="relative mx-auto max-w-[1440px] lg:mt-80 mt-72 w-full z-20">
       <div className="lg:absolute mx-auto lg:mx-0 lg:-top-24 flex lg:flex-row flex-col items-center justify-between lg:rounded-[40px] rounded-tl-[50px] rounded-tr-[50px] lg:left-1/2 lg:transform lg:-translate-x-1/2 py-10 xl:px-36 px-24 lg:w-2/3 w-1/3 bg-gradient-to-bottom z-30">
         <Link
           href={WhatsAppImage.src}

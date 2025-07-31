@@ -1,21 +1,23 @@
 import Hands from "../../assets/icons/hands.svg";
 import Link from "next/link";
-import { getTranslations } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
 import Animation from "./Animation";
-import ContactContainer from "@/components/ContactContainer";
+// import ContactContainer from "@/components/ContactContainer";
 
 export default async function Clients() {
   const t = await getTranslations();
+  const lang = await getLocale();
   const { title } = t.raw("Clients");
-  const {
-    title: subTitle,
-    btnTextOne,
-    btnTextTwo,
-  } = t.raw("Clients").ContactUs;
+  // const {
+  //   title: subTitle,
+  //   btnTextOne,
+  //   btnTextTwo,
+  // } = t.raw("Clients").ContactUs;
+  console.log(`${lang}#clients`);
 
   return (
     <section
-      id="clients"
+      id={`${lang}/clients`}
       className="py-8 border-b-primary-gray border-t-primary-gray flex items-center justify-between mx-auto px-5 max-w-[1500px] flex-col gap-y-12"
     >
       <div className="flex flex-col items-center justify-center mb-10">
@@ -29,11 +31,11 @@ export default async function Clients() {
         </Link>
       </div>
       <Animation />
-      <ContactContainer
+      {/* <ContactContainer
         subTitle={subTitle}
         btnTextOne={btnTextOne}
         btnTextTwo={btnTextTwo}
-      />
+      /> */}
     </section>
   );
 }
