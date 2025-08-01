@@ -7,8 +7,14 @@ import { FaXTwitter } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa";
 import Link from "next/link";
 import Logo from "../../assets/images/company-logo.svg";
+import { getLocale } from "next-intl/server";
 
-export default function Footer() {
+export default async function Footer() {
+  const lang = await getLocale();
+  const getLocalizedContactPath = () => {
+    return `/${lang}`;
+  };
+
   return (
     <>
       <div className="overflow-x-hidden max-w-[1440px] mx-auto">
@@ -16,7 +22,7 @@ export default function Footer() {
       </div>
       <footer className="flex flex-col mt-14 max-w-[1500px] mx-auto">
         <div className="lg:mx-28 mx-auto">
-          <Link href={"./"}>
+          <Link href={getLocalizedContactPath()}>
             <img
               className="max-w-[235px] max-h-[158px]"
               src={Logo.src}
