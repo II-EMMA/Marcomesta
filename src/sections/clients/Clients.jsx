@@ -2,6 +2,7 @@ import Hands from "../../assets/icons/hands.svg";
 import Link from "next/link";
 import { getLocale, getTranslations } from "next-intl/server";
 import Animation from "./Animation";
+import NewAnimation from "./NewAnimation";
 // import ContactContainer from "@/components/ContactContainer";
 
 export default async function Clients() {
@@ -18,7 +19,7 @@ export default async function Clients() {
   return (
     <section
       id={`${lang}/clients`}
-      className="py-8 border-b-primary-gray border-t-primary-gray flex items-center justify-between mx-auto px-5 max-w-[1500px] flex-col gap-y-12"
+      className="py-8 border-b-primary-gray border-t-primary-gray flex items-center justify-between mx-auto px-5 max-w-[1500px] flex-col xl:gap-y-16 gap-y-24 "
     >
       <div className="flex flex-col items-center justify-center mb-10">
         <h5 className="text-purple-gradient-5 text-5xl ">{title}</h5>
@@ -30,7 +31,8 @@ export default async function Clients() {
           />
         </Link>
       </div>
-      <Animation />
+      <NewAnimation />
+      {/* <Animation /> */}
       {/* <ContactContainer
         subTitle={subTitle}
         btnTextOne={btnTextOne}

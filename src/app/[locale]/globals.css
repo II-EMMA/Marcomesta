@@ -395,24 +395,7 @@
 }
 
 /* ==> styling the dropdown menu */
-option {
-  font-size: 16px;
-  color: white;
-  background-color: var(--color-purple-gradient-5);
-}
 
-option:before {
-  content: ">";
-  font-size: 16px;
-  display: none;
-  padding-right: 10px;
-  padding-left: 5px;
-  color: #fff;
-}
-
-option:hover:before {
-  display: inline;
-}
 @theme {
 }
 

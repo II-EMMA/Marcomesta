@@ -48,13 +48,13 @@ export default function SwitchLangDropdown() {
       >
         <option
           value="en"
-          className="text-black text-sm bg-[#4c0a7c] rounded-full focus:bg-[#4c0a7c]/70 border border-white "
+          className="text-white text-sm bg-[#4c0a7c] rounded-full focus:bg-[#4c0a7c]/70 border border-white "
         >
           EN
         </option>
         <option
           value="ar"
-          className="text-black text-sm bg-[#4c0a7c] rounded-full hover:bg-[#4c0a7c]/70"
+          className="text-white text-sm bg-[#4c0a7c] rounded-full hover:bg-[#4c0a7c]/70"
         >
           AR
         </option>
