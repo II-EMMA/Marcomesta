@@ -24,7 +24,7 @@ export default function NewAnimation() {
   const duplicatedImages = [...images, ...images, ...images, ...images];
 
   return (
-    <div className="bg-purple-200/10 opacity-80 py-8">
+    <div className="opacity-80 py-8">
       <div className="container mx-auto">
         <div className="flex flex-col xl:flex-row items-center justify-between xl:gap-x-8 md:gap-y-11 gap-y-8 xl:gap-y-0">
           <h2
@@ -36,7 +36,7 @@ export default function NewAnimation() {
           </h2>
 
           <div
-            className={`overflow-hidden w-full ${
+            className={`overflow-hidden w-full bg-purple-200/5 ${
               isRTL
                 ? "[mask-image:linear-gradient(to_left,_transparent,_black_25%,_black_75%,_transparent)]"
                 : "[mask-image:linear-gradient(to_right,_transparent,_black_25%,_black_75%,_transparent)]"
