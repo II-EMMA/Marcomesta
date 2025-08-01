@@ -36,7 +36,7 @@ export default function NewAnimation() {
           </h2>
 
           <div
-            className={`overflow-hidden w-full bg-purple-200/5 ${
+            className={`overflow-hidden w-full bg-purple-200/10 ${
               isRTL
                 ? "[mask-image:linear-gradient(to_left,_transparent,_black_25%,_black_75%,_transparent)]"
                 : "[mask-image:linear-gradient(to_right,_transparent,_black_25%,_black_75%,_transparent)]"
