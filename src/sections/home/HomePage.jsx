@@ -43,9 +43,9 @@ export default async function HomePage() {
             <div className="self-center lg:self-start">
               <Link
                 href={getLocalizedContactPath()}
-                className="lg:w-auto w-full py-4 sm:px-32 mx-2 sm:mx-0"
+                className="lg:w-auto md:w-full mx-2 sm:mx-0"
               >
-                <CustomBtn className="self-center lg:self-start cursor-pointer mt-14 bg-[#b52e94] py-4 sm:px-32 w-full mx-2 sm:mx-0 text-xl border border-white hover:bg-white hover:text-[#b52e94] ">
+                <CustomBtn className="self-center lg:self-start cursor-pointer mt-14 bg-[#b52e94] py-4 md:px-32 px-14 w-full mx-2 sm:mx-0 text-xl border border-white hover:bg-white hover:text-[#b52e94] ">
                   {btnText}
                 </CustomBtn>
               </Link>

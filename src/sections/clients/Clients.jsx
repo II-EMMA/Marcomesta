@@ -14,7 +14,6 @@ export default async function Clients() {
   //   btnTextOne,
   //   btnTextTwo,
   // } = t.raw("Clients").ContactUs;
-  console.log(`${lang}#clients`);
 
   return (
     <section
