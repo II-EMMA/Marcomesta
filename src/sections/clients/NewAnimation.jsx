@@ -28,7 +28,7 @@ export default function NewAnimation() {
       <div className="container mx-auto">
         <div className="flex flex-col xl:flex-row items-center justify-between xl:gap-x-8 md:gap-y-11 gap-y-8 xl:gap-y-0">
           <h2
-            className={`text-[#38c295] text-4xl font-extrabold text-center mx-2 sm:mx-0 ${
+            className={`text-purple-gradient-5 text-4xl font-extrabold text-center mx-2 sm:mx-0 ${
               isRTL ? "2xl:mr-10 xl:mr-5 ml-0" : "2xl:ml-10 xl:ml-5 mr-0"
             }`}
           >
