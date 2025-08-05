@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import { useLocale, useTranslations } from "next-intl";
 import Logo from "../../assets/images/new-company-logo.png";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const images = [
   { src: Logo.src, alt: "Company Logo", style: "max-w-[180px] max-h-[180px]" },
@@ -19,6 +19,19 @@ export default function NewAnimation() {
   const t = useTranslations();
   const { subTitle } = t.raw("Clients");
   const [isHovered, setIsHovered] = useState(false);
+  const [isLargeScreen, setIsLargeScreen] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsLargeScreen(window.innerWidth >= 1024);
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <div className="opacity-80 py-8">
@@ -34,8 +47,8 @@ export default function NewAnimation() {
 
           <div
             className={`overflow-x-hidden w-full bg-[#38c295]/2 `}
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
+            onMouseEnter={() => isLargeScreen && setIsHovered(true)}
+            onMouseLeave={() => isLargeScreen && setIsHovered(false)}
           >
             <div
               className={`flex gap-14 items-center ${
