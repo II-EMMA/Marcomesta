@@ -40,7 +40,7 @@ export default async function Footer() {
           <div className="flex lg:flex-row flex-col xl:items-stretch items-center lg:gap-x-20 gap-y-16">
             <div className="flex xl:flex-row xl:gap-x-4 flex-col gap-y-7 xl:gap-y-0 items-center">
               <p className="text-black font-normal text-base ">
-                info@marcomesta.com
+                info@marcomista.com
               </p>
               <img
                 className="max-w-[62px] max-h-[33px]"

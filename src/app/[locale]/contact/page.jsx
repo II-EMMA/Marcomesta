@@ -97,7 +97,7 @@ export default async function page() {
                 alt="Email"
               />
               <p className="text-white font-bold sm:text-2xl text-xl">
-                info@marcomesta.com
+                info@marcomista.com
               </p>
             </div>
             <div className="flex flex-col gap-y-4 items-center">
