@@ -87,7 +87,7 @@ export default function Header() {
         <div className="flex items-center lg:gap-x-4 z-[3500]">
           <Link href={getLocalizedPath("/")} onClick={closeToggle}>
             <img
-              className="max-w-[217px] max-h-[86px]"
+              className="w-[217px] h-[86px] max-w-[217px] max-h-[86px]"
               src={Logo.src}
               alt="Company logo"
             />

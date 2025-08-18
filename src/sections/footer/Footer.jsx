@@ -24,7 +24,7 @@ export default async function Footer() {
         <div className="lg:mx-28 mx-auto">
           <Link href={getLocalizedContactPath()}>
             <img
-              className="max-w-[235px] max-h-[158px]"
+              className="max-w-[235px] max-h-[158px] w-[235px] h-[158px]"
               src={Logo.src}
               alt="Company Logo"
             />

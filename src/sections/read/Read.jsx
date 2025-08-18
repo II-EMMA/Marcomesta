@@ -14,7 +14,7 @@ export default async function Read() {
     >
       <Link href={Logo.src} target="_blank" rel="noopener noreferrer">
         <img
-          className="sm:max-w-[419px] max-w-[300px] max-h-[231px]"
+          className="sm:max-w-[419px] max-w-[300px] max-h-[231px] sm:w-[419px] w-[300px] h-[231px]"
           src={Logo.src}
           alt="Company Logo"
         />
